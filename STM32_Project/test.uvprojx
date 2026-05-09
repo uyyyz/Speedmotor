@@ -327,7 +327,7 @@
             <wLevel>2</wLevel>
             <uThumb>0</uThumb>
             <uSurpInc>0</uSurpInc>
-            <uC99>0</uC99>
+            <uC99>1</uC99>
             <uGnu>1</uGnu>
             <useXO>0</useXO>
             <v6Lang>1</v6Lang>
@@ -665,10 +665,37 @@
               <FileType>5</FileType>
               <FilePath>.\System\Delay.h</FilePath>
             </File>
+            <File>
+              <FileName>Header.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\System\Header.h</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
           <GroupName>Hardware</GroupName>
+          <Files>
+            <File>
+              <FileName>TFT.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Hardware\TFT.c</FilePath>
+            </File>
+            <File>
+              <FileName>TFT.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Hardware\TFT.h</FilePath>
+            </File>
+            <File>
+              <FileName>Display_ROM.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Hardware\Display_ROM.h</FilePath>
+            </File>
+            <File>
+              <FileName>Display_ROM.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Hardware\Display_ROM.c</FilePath>
+            </File>
+          </Files>
         </Group>
         <Group>
           <GroupName>User</GroupName>
