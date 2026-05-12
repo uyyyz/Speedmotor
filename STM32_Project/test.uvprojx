@@ -695,6 +695,26 @@
               <FileType>1</FileType>
               <FilePath>.\Hardware\Display_ROM.c</FilePath>
             </File>
+            <File>
+              <FileName>SPI_DMA.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Hardware\SPI_DMA.c</FilePath>
+            </File>
+            <File>
+              <FileName>SPI_DMA.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Hardware\SPI_DMA.h</FilePath>
+            </File>
+            <File>
+              <FileName>ST7789.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Hardware\ST7789.c</FilePath>
+            </File>
+            <File>
+              <FileName>ST7789.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Hardware\ST7789.h</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

@@ -15,18 +15,19 @@ int main(void)
 	
 	GPIO_SetBits(GPIOC,GPIO_Pin_13);
 	
-
-	TFT_Init();
-	TFT_FullScreen(COLOR_RED);
-	TFT_FullScreen(COLOR_BLUE);
-	TFT_FullScreen(COLOR_BLACK);
-
 	
-	TFT_ShowImage(60, 150, 50, 50, gImage_1);
-
+	LCD_Init();
+	LCD_FillScreen(COLOR_BLACK);
+	LCD_DrawString(30, 130, "Initializing...", COLOR_WHITE, COLOR_BLACK, 1);
+	Delay_ms(2000);
+	
 	while(1)
 	{
-		TFT_DrawChar16(10, 300, tfont16, COLOR_WHITE, COLOR_BLACK);
+		LCD_FillScreen(COLOR_BLUE);
+		LCD_FillScreen(COLOR_BLACK);
+		LCD_FillScreen(COLOR_CYAN);
+		LCD_FillScreen(COLOR_GRAY);
+		LCD_FillScreen(COLOR_GREEN);
 	}
 }
 
