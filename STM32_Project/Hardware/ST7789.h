@@ -6,8 +6,8 @@
 /* ═══════════════════════════════════════════════════════════════════════
  *  屏幕分辨率（2.8 寸 ST7789，240×320）
  * ═══════════════════════════════════════════════════════════════════════ */
-#define LCD_WIDTH   240
-#define LCD_HEIGHT  320
+extern uint16_t LCD_WIDTH;
+extern uint16_t LCD_HEIGHT;
 
 /*
  * ST7789 驱动有时存在 20 像素的行偏移（取决于模组厂商）
@@ -85,8 +85,8 @@
  * ═══════════════════════════════════════════════════════════════════════ */
 #define RGB565(r, g, b)  ((uint16_t)(((r) & 0xF8) << 8) | (((g) & 0xFC) << 3) | ((b) >> 3))
 
-#define COLOR_BLACK    0x0000
-#define COLOR_WHITE    0xFFFF
+#define COLOR_WHITE    0x0000
+#define COLOR_BLACK    0xFFFF
 #define COLOR_RED      RGB565(255,   0,   0)
 #define COLOR_GREEN    RGB565(  0, 255,   0)
 #define COLOR_BLUE     RGB565(  0,   0, 255)

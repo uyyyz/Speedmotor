@@ -31,14 +31,14 @@ void TFT_DrawChar16(uint16_t x, uint16_t y,const unsigned char *font,uint16_t fg
 void TFT_ShowImage(uint16_t x, uint16_t y,uint8_t height , uint8_t width,const unsigned char *image);
 
 //color define and ABC
-#define COLOR_RED     0xF800
-#define COLOR_GREEN   0x07E0
-#define COLOR_BLUE    0x001F
-#define COLOR_PURPLE  0x780F
-#define COLOR_WHITE   0xFFFF
-#define COLOR_BLACK   0x0000
-#define COLOR_YELLOW  0xFFE0
-#define COLOR_CYAN    0x07FF
+//#define COLOR_RED     0xF800
+//#define COLOR_GREEN   0x07E0
+//#define COLOR_BLUE    0x001F
+//#define COLOR_PURPLE  0x780F
+//#define COLOR_WHITE   0xFFFF
+//#define COLOR_BLACK   0x0000
+//#define COLOR_YELLOW  0xFFE0
+//#define COLOR_CYAN    0x07FF
 
 
 

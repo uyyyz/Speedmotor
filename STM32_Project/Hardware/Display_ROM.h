@@ -9,7 +9,7 @@ extern const unsigned char tfont32_1[128];
 extern const unsigned char tfont16[32];
 
 //image
-extern const unsigned char gImage_1[5000];
+extern const unsigned char gImage_1[7200];
 
 
 #endif

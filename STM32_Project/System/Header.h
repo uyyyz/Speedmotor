@@ -10,14 +10,15 @@
 #include <stdint.h>
 #include <stdlib.h>   /* abs() */
 
+#include "Delay.h"
+
 #include "SPI_DMA.h"
 #include "ST7789.h"
 
 
 #include "Display_ROM.h"
 
-#include "Delay.h"
-#include "TFT.h"
+//#include "TFT.h"
 
 
 

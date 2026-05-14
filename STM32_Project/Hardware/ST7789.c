@@ -1,5 +1,8 @@
 #include "st7789.h"
 
+uint16_t LCD_WIDTH = 240;
+uint16_t LCD_HEIGHT = 320;
+	
 /* ═══════════════════════════════════════════════════════════════════════
  *  内置 5×7 ASCII 字体（32~127 共 96 个字符）
  * ═══════════════════════════════════════════════════════════════════════ */
@@ -248,6 +251,16 @@ void LCD_SetRotation(uint8_t madctl)
 {
     lcd_write_cmd(ST7789_MADCTL);
     lcd_write_data(madctl);
+	if(madctl == LCD_ROTATION_90 || madctl == LCD_ROTATION_270)
+	{
+		LCD_WIDTH = 320;
+		LCD_HEIGHT = 240;
+	}
+	else
+	{
+		LCD_WIDTH = 240;
+		LCD_HEIGHT = 320;
+	}
 }
 
 /* ═══════════════════════════════════════════════════════════════════════
