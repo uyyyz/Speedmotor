@@ -9,11 +9,18 @@
 #include "math.h"
 #include <stdint.h>
 #include <stdlib.h>   /* abs() */
+#include "stdarg.h"
+#include <stdint.h>  
+#include <stdbool.h>
+#include <ctype.h>
 
 #include "Delay.h"
 
+#include "UART.h"
+
 #include "SPI_DMA.h"
 #include "ST7789.h"
+#include "GPS.h"
 
 
 #include "Display_ROM.h"

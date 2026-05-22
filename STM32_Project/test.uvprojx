@@ -670,6 +670,16 @@
               <FileType>5</FileType>
               <FilePath>.\System\Header.h</FilePath>
             </File>
+            <File>
+              <FileName>UART.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\System\UART.c</FilePath>
+            </File>
+            <File>
+              <FileName>UART.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\System\UART.h</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -714,6 +724,16 @@
               <FileName>ST7789.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\Hardware\ST7789.h</FilePath>
+            </File>
+            <File>
+              <FileName>GPS.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Hardware\GPS.c</FilePath>
+            </File>
+            <File>
+              <FileName>GPS.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Hardware\GPS.h</FilePath>
             </File>
           </Files>
         </Group>
