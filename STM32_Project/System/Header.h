@@ -21,6 +21,8 @@
 #include "SPI_DMA.h"
 #include "ST7789.h"
 #include "GPS.h"
+#include "DHT11.h"
+#include "DHT_Display.h"
 
 
 #include "Display_ROM.h"

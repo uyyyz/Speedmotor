@@ -735,6 +735,16 @@
               <FileType>5</FileType>
               <FilePath>.\Hardware\GPS.h</FilePath>
             </File>
+            <File>
+              <FileName>DHT11.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Hardware\DHT11.c</FilePath>
+            </File>
+            <File>
+              <FileName>DHT11.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Hardware\DHT11.h</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -759,6 +769,16 @@
               <FileName>stm32f10x_it.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\User\stm32f10x_it.h</FilePath>
+            </File>
+            <File>
+              <FileName>DHT_Display.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\User\DHT_Display.c</FilePath>
+            </File>
+            <File>
+              <FileName>DHT_Display.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\User\DHT_Display.h</FilePath>
             </File>
           </Files>
         </Group>

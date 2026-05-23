@@ -3,6 +3,9 @@
 
 static char Time_display[20] = "00:00:00.00"; 
 static char Today_display[10] = "2000/00/00";
+static char Temp_display[6] = "00.00";
+static char Humi_display[6] = "00.00";
+
 
 int main(void)
 {
@@ -17,7 +20,10 @@ int main(void)
 	Delay_ms(500);
 	
 	GPS_Init();
-	
+	Init_DHT11_IO();
+    Init_TIM2();
+
+
 	//Temp UI design
 	LCD_FillScreen(COLOR_BLACK);
 	LCD_DrawString(10,10,"NOW:",COLOR_WHITE,COLOR_BLACK,2);
@@ -35,11 +41,11 @@ int main(void)
 	LCD_DrawString(185,75,"00:00",COLOR_WHITE,COLOR_BLACK,4);		//Total Time
 	
 	LCD_DrawString(10,125,"Temp:",COLOR_WHITE,COLOR_BLACK,2);
-	LCD_DrawString(70,125,"00.00",COLOR_WHITE,COLOR_BLACK,2);		//temperature
+	LCD_DrawString(70,125,Temp_display,COLOR_WHITE,COLOR_BLACK,2);		//temperature
 	LCD_DrawString(130,125,"C",COLOR_WHITE,COLOR_BLACK,2);
 	
 	LCD_DrawString(10,150,"Humi:",COLOR_WHITE,COLOR_BLACK,2);
-	LCD_DrawString(70,150,"00.00",COLOR_WHITE,COLOR_BLACK,2);		//humidity
+	LCD_DrawString(70,150,Humi_display,COLOR_WHITE,COLOR_BLACK,2);		//humidity
 	LCD_DrawString(130,150,"%",COLOR_WHITE,COLOR_BLACK,2);
 	
 	LCD_DrawString(10,175,"Alti:",COLOR_WHITE,COLOR_BLACK,2);
@@ -50,23 +56,15 @@ int main(void)
 	LCD_DrawString(20,220,Today_display,COLOR_WHITE,COLOR_BLACK,2);
 	LCD_DrawString(160,220,Time_display,COLOR_WHITE,COLOR_BLACK,2);			//Real-Time
 	
-	LCD_FillRect(150,15,2,3,COLOR_RED);
+	LCD_FillRect(155,12,3,7,COLOR_RED);
+	LCD_FillRect(160,7,3,12,COLOR_RED);
+	LCD_FillRect(165,2,3,17,COLOR_RED);
 	
 	while(1)
 	{
-//		LCD_FillScreen(COLOR_BLUE);
-//		Delay_ms(1000);
-//		LCD_FillScreen(COLOR_BLACK);
-//		Delay_ms(2000);
-//		LCD_FillScreen(COLOR_CYAN);
-//		Delay_ms(2000);
-//		LCD_FillScreen(COLOR_GRAY);
-//		Delay_ms(2000);
-//		LCD_FillScreen(COLOR_GREEN);
-//		Delay_ms(2000);
-		
-
 		ParseNMEA_Data(gps_data.buf);
+
+		//GPS data display
 		sprintf(Time_display,"%c%c:%c%c:%c%c.%c%c",gps_data.utc_time[0],gps_data.utc_time[1],gps_data.utc_time[2],gps_data.utc_time[3],gps_data.utc_time[4],gps_data.utc_time[5],gps_data.utc_time[7],gps_data.utc_time[8]);
 		LCD_DrawString(160,220,Time_display,COLOR_WHITE,COLOR_BLACK,2);
 		sprintf(Today_display,"20%c%c/%c%c/%c%c",gps_data.utc_today[4],gps_data.utc_today[5],gps_data.utc_today[2],gps_data.utc_today[3],gps_data.utc_today[0],gps_data.utc_today[1]);
@@ -74,6 +72,16 @@ int main(void)
 		
 		LCD_DrawString(70,175,gps_data.altitude,COLOR_WHITE,COLOR_BLACK,2);
 		
+		//DHT11 data display
+		snprintf(Temp_display, sizeof(Temp_display), "%02d.%02d",
+         			DHT11_LastData.temperature_int, DHT11_LastData.temperature_dec);
+		LCD_DrawString(70,125,Temp_display,COLOR_WHITE,COLOR_BLACK,2);
+
+		snprintf(Humi_display, sizeof(Humi_display), "%02d.%02d",
+         			DHT11_LastData.humidity_int, DHT11_LastData.humidity_dec);
+		LCD_DrawString(70,150,Humi_display,COLOR_WHITE,COLOR_BLACK,2);
+
+
 	}
 }
 
