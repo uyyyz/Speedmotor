@@ -780,6 +780,16 @@
               <FileType>5</FileType>
               <FilePath>.\User\DHT_Display.h</FilePath>
             </File>
+            <File>
+              <FileName>GPS_Display.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\User\GPS_Display.c</FilePath>
+            </File>
+            <File>
+              <FileName>GPS_Display.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\User\GPS_Display.h</FilePath>
+            </File>
           </Files>
         </Group>
       </Groups>

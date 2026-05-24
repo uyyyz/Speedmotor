@@ -22,7 +22,10 @@
 #include "ST7789.h"
 #include "GPS.h"
 #include "DHT11.h"
+
+//LCD Display user function
 #include "DHT_Display.h"
+#include "GPS_Display.h"
 
 
 #include "Display_ROM.h"
